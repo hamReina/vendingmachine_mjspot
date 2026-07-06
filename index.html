@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>名城大学自動販売機マップ</title>
-    //タイトル
+    <!-- タイトル -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    //画面の幅を端末ごとに変換する
+    <!-- 画面の幅を端末ごとに変換する -->
     <link href="css/index.css" rel="stylesheet" />
-    //CSSファイルを読み込む
+    <!-- CSSファイルを読み込む -->
   </head>
 
   <body>
     <header>
       <div class="header-inner">
-        <!-- 左上：トップ（フローティングメニュー風） -->
+        <!-- トップ（フローティングメニュー風） -->
         <a href="index.html" class="logo-btn">トップ</a>
 
-        <!-- 右上：詳しく探す（ハンバーガーメニューボタン） -->
+        <!-- 詳しく探す（ハンバーガーメニューボタン） -->
         <button id="menu-trigger" class="menu-btn" aria-label="メニューを開く">
           詳しく探す
         </button>
@@ -27,35 +27,43 @@
     <nav id="drawer-menu" class="drawer-menu">
       <div class="menu-content">
         <ul>
-          <li><a href="Tower">① タワー</a></li>
-          <li><a href="BuildingS">②共通講義棟南</a></li>
-          <li><a href="BuildingN">③ 共通講義棟北</a></li>
-          <li><a href="BuildingE.html">④ 東編</a></li>
+          <li><a href="Tower.html">1. タワー</a></li>
+          <li><a href="BuildingS.html">2. 共通講義棟南</a></li>
+          <li><a href="BuildingN.html">3. 共通講義棟北</a></li>
+          <li><a href="BuildingE.html.html">4. 東編</a></li>
         </ul>
       </div>
     </nav>
 
-    //メインタイトルエリア
+    <!--メインタイトルエリア -->
     <main class="main">
       <section class="mainsection">
         <h1>名城大学内の自動販売機を見つけよう！</h1>
         <p>名城大学内の自動販売機を地図から探すことができます．</p>
       </section>
 
-      //全体地図エリア
+      <!--全体地図エリア -->
       <section class="map-section">
         <h2>名城大学全体の自動販売機の場所</h2>
 
-        <p>・自動販売機の場所に印がついています．</p>
+        <p>自動販売機の場所に印がついています．</p>
 
-        /*
         <div class="totalmap">
-          <img src="images/totalmap.png" />
+          <img src="image/Mainmap.png" alt="名城大学の地図" />
         </div>
-        */
       </section>
 
-      //アクセスエリア
+      <!--アクセスエリア -->
+      <div class="map">
+        <h2>アクセスマップ</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1115.2360323906423!2d136.9784476069544!3d35.135117376735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037ad5058b80ef%3A0xead84a215623ada8!2z44CSNDY4LTAwNzMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65aGp6Yec5Y-j77yR5LiB55uu77yU77yR77yR!5e1!3m2!1sja!2sjp!4v1750660671871!5m2!1sja!2sjp"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </main>
   </body>
 </html>
