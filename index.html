@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>名城大学自動販売機マップ</title>
+    //タイトル
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    //画面の幅を端末ごとに変換する
+    <link href="css/index.css" rel="stylesheet" />
+    //CSSファイルを読み込む
+  </head>
+
+  <body>
+    <header>
+      <div class="header-inner">
+        <!-- 左上：トップ（フローティングメニュー風） -->
+        <a href="index.html" class="logo-btn">トップ</a>
+
+        <!-- 右上：詳しく探す（ハンバーガーメニューボタン） -->
+        <button id="menu-trigger" class="menu-btn" aria-label="メニューを開く">
+          詳しく探す
+        </button>
+      </div>
+    </header>
+
+    <!-- ドロワーメニュー（「詳しく探す」をクリックした時に開くエリア） -->
+    <nav id="drawer-menu" class="drawer-menu">
+      <div class="menu-content">
+        <ul>
+          <li><a href="Tower">① タワー</a></li>
+          <li><a href="BuildingS">②共通講義棟南</a></li>
+          <li><a href="BuildingN">③ 共通講義棟北</a></li>
+          <li><a href="BuildingE.html">④ 東編</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    //メインタイトルエリア
+    <main class="main">
+      <section class="mainsection">
+        <h1>名城大学内の自動販売機を見つけよう！</h1>
+        <p>名城大学内の自動販売機を地図から探すことができます．</p>
+      </section>
+
+      //全体地図エリア
+      <section class="map-section">
+        <h2>名城大学全体の自動販売機の場所</h2>
+
+        <p>・自動販売機の場所に印がついています．</p>
+
+        /*
+        <div class="totalmap">
+          <img src="images/totalmap.png" />
+        </div>
+        */
+      </section>
+
+      //アクセスエリア
+    </main>
+  </body>
+</html>
