@@ -12,40 +12,79 @@
 
   <body>
     <header>
-      <div class="header-inner">
-        <!-- トップ（フローティングメニュー風） -->
-        <a href="index.html" class="logo-btn">トップ</a>
+      <div class="header">
+        <div class="site-title">名城大学 学内自販機ナビ</div>
+
 
         <!-- 詳しく探す（ハンバーガーメニューボタン） -->
         <button id="menu-trigger" class="menu-btn" aria-label="メニューを開く">
-          詳しく探す
+          <span>🔍</span> 詳しく探す
         </button>
       </div>
     </header>
 
-    <!-- ドロワーメニュー（「詳しく探す」をクリックした時に開くエリア） -->
+    <!-- ドロワーメニュー（「詳しく探す」をクリックした時に開く） -->
     <nav id="drawer-menu" class="drawer-menu">
-      <div class="menu-content">
+      <div class="building-list">
         <ul>
-          <li><a href="Tower.html">1. タワー</a></li>
-          <li><a href="BuildingS.html">2. 共通講義棟南</a></li>
-          <li><a href="BuildingN.html">3. 共通講義棟北</a></li>
-          <li><a href="BuildingE.html.html">4. 東編</a></li>
+          <li><a href="Tower.html">① タワー</a></li>
+          <li><a href="BuildingN.html">② 共通講義棟北 (N)</a></li>
+          <li><a href="BuildingS.html">③ 共通講義棟南 (S)</a></li>
+          <li><a href="BuildingE.html">④ 共通講義棟東 (W)</a></li>
         </ul>
       </div>
     </nav>
 
     <!--メインタイトルエリア -->
     <main class="main">
-      <section class="mainsection">
-        <h1>名城大学内の自動販売機を見つけよう！</h1>
-        <p>名城大学内の自動販売機を地図から探すことができます．</p>
+
+     <section class="hero-banner">
+        <h1 class="hero-title">あなたのすぐそばに、<br />お目当ての1台を。</h1>
+        <p class="hero-lead">
+          メーカーごとの色分け表示で、お目当ての製品が学内のどこにあるか一瞬でわかります。
+        </p>
       </section>
 
-      <!--全体地図エリア -->
-      <section class="map-section">
-        <h2>名城大学全体の自動販売機の場所</h2>
+      <h2 class="section-title">🚩 学内自販機ナビの使い方</h2>
+        <ul class="guide-list">
+          <li>
+            <strong>色でメーカーを識別：</strong><br />
+            コカ・コーラは<span class="txt-coca-cola">赤</span>、
+            サントリーは<span class="txt-suntory">緑</span>、 ジョージアは<span
+            class="txt-georgia">紫</span>、 Dydoは<span class="txt-dydo">オレンジ</span>でフロアマップに表示
+        </li>
+        <li>
+          <strong>右上の「詳しく探す」ボタン：</strong><br />
+          クリックして、目的の建物名を選択すると、階数ごとのフロアマップが表示され、自動販売機の場所が具体的に分かる
+        </li>
+      </ul>
 
+<div class="vending-row">
+    <div class="vending-image-wrapper">
+        <img src="image/cola.jpg" alt="コカ・コーラ 自動販売機" class="vending-img">
+        <p class="vending-name">コカ・コーラ</p>
+    </div>
+
+    <div class="vending-image-wrapper">
+        <img src="image/suntory.jpg" alt="サントリー 自動販売機" class="vending-img">
+        <p class="vending-name">サントリー</p>
+    </div>
+
+    <div class="vending-image-wrapper">
+        <img src="image/georgia.jpg" alt="ジョージア 自動販売機" class="vending-img">
+        <p class="vending-name">ジョージア</p>
+    </div>
+
+    <div class="vending-image-wrapper">
+        <img src="image/dydo.png" alt="ダイドー 自動販売機" class="vending-img">
+        <p class="vending-name">ダイドー</p>
+    </div>
+</div>
+</div>
+
+      <!--全体地図エリア -->
+      <section class="guide-section">
+        <h2 class="section-title">■ 全体地図（天白キャンパス）</h2>
         <p>自動販売機の場所に印がついています．</p>
 
         <div class="totalmap">
@@ -54,8 +93,11 @@
       </section>
 
       <!--アクセスエリア -->
-      <div class="map">
-        <h2>アクセスマップ</h2>
+      <section class="access-section">
+        <h2 class="section-title">📍 アクセス（名城大学 天白キャンパス）</h2>
+        <p class="address-text">
+          住所：〒468-8502 愛知県名古屋市天白区塩釜口一丁目501番地
+        </p>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1115.2360323906423!2d136.9784476069544!3d35.135117376735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037ad5058b80ef%3A0xead84a215623ada8!2z44CSNDY4LTAwNzMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65aGp6Yec5Y-j77yR5LiB55uu77yU77yR77yR!5e1!3m2!1sja!2sjp!4v1750660671871!5m2!1sja!2sjp"
           style="border: 0"
@@ -63,7 +105,10 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+      </section>
     </main>
+
+    <script src="toggle-menu.js"></script
+
   </body>
 </html>
