@@ -3,204 +3,160 @@
 
 *,
 ::before,
-::after{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 /*箇条書きの行頭の黒丸・数字を消す*/
-ul,ol{
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 /*文字色を親要素に合わせる*/
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 /*ページ全体の基本フォントや文字サイズなど*/
 body {
-    font-family: sans-serif;
-    font-size: 16pt;
-    color: #000000;
-    line-height: 1;
-    background-color: #ffffff;
+  font-family: sans-serif;
+  font-size: 16pt;
+  color: #000000;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding: 10px;
 }
 /*画像の最大幅を100%にする*/
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 /*ページ内の浮動メニュー*/
-nav.floating{
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    background-color: #d0d0d0;
+nav.floating {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  background-color: #d0d0d0;
+}
+/*ヘッダー*/
+header{
+  border-bottom: 2px solid #ccc;
+  color: #ffffff;
+  background-color: #af1d3d;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.first-view {
-    height: calc(100vh - 110px);
-    background-image: url(../images/index/bg_main.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
+.site-title{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.menu-btn{
+  padding: 5px 10px;
+  border: 1px solid #333;
+  background: #fff;
+  cursor: pointer;
+}
+/*ドロワーメニュー*/
+.drawer-menu {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+}
+.building-list ul {
+    list-style: none;
 }
 
-.first-view-text {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40ox;
-    padding-bottom: 80px;
+/* メインコンテンツ */
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ヒーローエリア */
+.hero-banner {
+    background-color: #af1d3d;
     color: #ffffff;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #4b2c14;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.hero-title {
+    font-size: 3.4rem;
+    margin-bottom: 100px;
 }
 
-.first-view-text h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 56px;
-    line-height: 72px;
+/* セクションタイトル */
+.section-title {
+    font-size: 1.3rem;
+    margin: 30px 0 15px;
+    border-left: 5px solid #333;
+    padding-left: 10px;
 }
 
-.first-view-text p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.lead {
-    max-width: 1200px;
-    margin: 60px auto;
-}
-
-.header-inner {
-    max-width: 1200px;
-    height: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle-menu-button {
-    display: none;
-}
-
-.header-logo {
-    display: block;
-    width: 170px;
-}
-
-.site-menu ul {
-    display: flex;
-}
-
-.site-menu ul li {
+/* ガイドリスト */
+.guide-list {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.guide-list li {
+    margin-bottom: 10px;
 }
 
-.site-menu ul li a {
-    font-family: 'Cherry Bomb One', cursive;
+/* 色分けテキスト */
+.txt-coca-cola { color: red; font-weight: bold; }
+.txt-suntory { color: green; font-weight: bold; }
+.txt-georgia { color: purple; font-weight: bold; }
+.txt-dydo { color: orange; font-weight: bold; }
+
+/* 自販機の名前のスタイル設定 */
+.vending-name {
+  text-align: center; /* 文字を中央寄せにする */
+  font-size: 0.85rem; /* 文字の大きさを少し小さめにしてスマートに */
+  font-weight: bold; /* 文字を太字にする */
+  margin-top: 8px; /* 画像と文字の間に少し隙間をあける */
+  color: #333; /* 設計図に合わせて、コカ・コーラ用の赤色に（黒が良い場合は #333 にしてください） */
 }
-
-@media (max-width: 800px) {
-    .site-menu ul {
-        display: block;
-        text-align: center;
-    }
-
-    .site-menu li {
-        margin-top: 20px;
-    }
-
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #ffffff;
-        height: 50px;
-        z-index: 10;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-inner {
-        padding-left: 20px;
-        padding-right: 20px;
-        height: 100%;
-        position: relative;
-    }
-
-    .header-site-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        color: #ffffff;
-        background-color: #736e62;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        display: none;
-    }
-
-    .header-site-menu.is-show {
-        display: block;
-    }
-
-    .header-logo {
-        width: 100px;
-    }
-
-    .main {
-        padding-top: 50px;;
-    }
-
-    .footer-logo {
-        margin-top: 60px;
-    }
-
-    .copyright {
-        margin-top: 50px;
-    }
-
-    .toggle-menu-button {
-        display: block;
-        width: 44px;
-        height: 34px;
-        background-image: url(../images/common/icon-menu.png);
-        background-size: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        outline: none;
-    }
-}
-.footer {
-    color: #ffffff;
-    background-color: #24211b;
-    padding-top: 30px;
-    padding-bottom: 15px;
+/* 自販機画像並び */
+.vending-row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-.footer-logo {
-    display: block;
-    width: 235px;
-    margin-top: 90px;
+.vending-image-wrapper {
+    text-align: center;
+    width: 10%;
+    min-width: 185px;
 }
 
-.copyright {
-    font-size: 14pt;
-    font-weight: bold;
-    margin-top: 90px;
+.vending-img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* マップエリア */
+.totalmap img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/* アクセスエリア */
+.access-section iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
 }
