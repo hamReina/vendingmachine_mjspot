@@ -53,6 +53,12 @@ header{
     border-radius: 10px;/*丸角の枠で囲む*/
 }
 
+/*詳しく探すボタン（ハンバーガーメニュー）*/
+.menu-btn{
+    width: 100px;
+    height: 40px
+}
+
 /*メインコンテンツ*/
 .main{
     width: 100vw;
