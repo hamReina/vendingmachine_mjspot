@@ -92,12 +92,33 @@ header{
 .txt-dydo { color: orange; font-weight: bold; }
 
 /*階ごとのフロアマップ*/
+.floor-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.floor-container{
+    width: 45%;
+    text-align: center;
+    margin-bottom: 20px;
+}
 .floor-img-container img{
-    display: block;
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: auto;
 }
+
+/*フッター*/
+.footer{
+  color: #ffffff;
+  background-color: #af1d3d;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*モバイル端末用，主にサイズ調整*/
 @media(max-width: 800px){
     /*ページ全体*/
@@ -152,6 +173,21 @@ header{
     /*フロア画像*/
     .floor-img-container img{
         width: 100%;
+    }
+    /*階ごとのフロアマップ*/
+    .floor-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .floor-container{
+        width: 90%;
+        text-align: center;
+    }
+    .floor-container img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
     }
 }
 
