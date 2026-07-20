@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,
+ol{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    justify-content: center;
+}
+
+nav.floating {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  background-color: #d0d0d0;
+}
+/*ヘッダー*/
+header{
+    border-bottom: 2px solid #ccc;
+    color: #ffffff;
+    background-color: #af1d3d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-title{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.top-back-btn{
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*メニューボタン*/
+.menu-btn{
+    width: 100px;
+    height: 40px
+}
+
+.drawer-menu{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+}
+
+/*メイン*/
+.main{
+    width: 100vw;
+    margin-left:calc(50%-50vw);
+    padding: 0 40px;
+}
+
+/*フロアマップ，セクションタイトル*/
+.section-title{
+    font-size: 2rem;
+    margin: 30px 0 15px;
+    border-left:5px solid #333;
+    padding-left: 10px;
+}
+
+/*建物名*/
+.building-title-center{
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+/* 色分けテキスト */
+.txt-coca-cola { color: red; font-weight: bold; }
+.txt-suntory { color: green; font-weight: bold; }
+.txt-georgia { color: purple; font-weight: bold; }
+.txt-dydo { color: orange; font-weight: bold; }
+
+/*階ごとのフロアマップ*/
+.floor-img-container img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+}
