@@ -1,10 +1,10 @@
-//ハンバーガーメニュー（詳しく探す）の開閉処理
+//ハンバーガーメニューの開閉処理
 window.addEventListener("load", function () {
-  // index.htmlに書かれているID名を使って要素を取得します
+  // index.htmlに書かれているID名を使って要素を取得する
   const triggerBtn = document.getElementById("menu-trigger"); // 「詳しく探す」ボタン
-  const drawerMenu = document.getElementById("drawer-menu"); // 引き出しメニュー本体
+  const drawerMenu = document.getElementById("drawer-menu"); // 引き出しメニュー
 
-  // 【役割】「詳しく探す」ボタンがクリックされたときの動き
+  //「詳しく探す」ボタンがクリックされたときの動き
   if (triggerBtn && drawerMenu) {
     triggerBtn.addEventListener("click", function (event) {
       // メニューに「is-open」というクラスがついていれば消し、ついていなければ追加する（トグル処理）
@@ -14,9 +14,9 @@ window.addEventListener("load", function () {
       event.stopPropagation();
     });
 
-    //メニュー以外の場所（画面のどこか）をクリックしたときにメニューを自動で閉じる処理
+    //メニュー以外の場所をクリックしたときにメニューを自動で閉じる処理
     document.addEventListener("click", function (event) {
-      // クリックされた場所がメニュー内、またはボタン内でなければメニューを閉じます
+      // クリックされた場所がメニュー内、またはボタン内でなければメニューを閉じる
       if (
         !drawerMenu.contains(event.target) &&
         !triggerBtn.contains(event.target)
