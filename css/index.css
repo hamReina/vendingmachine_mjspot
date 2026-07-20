@@ -63,7 +63,7 @@ header{
 }
 
 /* メインコンテンツ */
-.main {
+.main-content {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     padding: 0 40px;

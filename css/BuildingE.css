@@ -64,7 +64,7 @@ header{
 }
 
 /*メインコンテンツ*/
-.main{
+.main-content{
     width: 100vw;
     margin-left:calc(50%-50vw);
     padding: 0 40px;
@@ -140,7 +140,7 @@ header{
         align-items: center;
     }
     /*メインコンテンツ*/
-    .main{
+    .main-content{
         width: 100%;
         margin-left: 0;
         padding:0 10px;
