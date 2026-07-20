@@ -45,6 +45,10 @@ header{
   background-color: #af1d3d;
   padding-bottom: 10px;
   margin-bottom: 20px;
+
+  position: sticky;      /* スクロールしても上部に固定 */
+  top: 0;               /* 画面の一番上にくっつける */
+  z-index: 100;         /* ドロワーメニュー(z-index: 200)の裏に隠れるように調整 */
 }
 .header{
   display: flex;
@@ -61,16 +65,6 @@ header{
   border: 1px solid #333;
   background: #fff;
   cursor: pointer;
-}
-/*ドロワーメニュー*/
-.drawer-menu {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: #f9f9f9;
-}
-.building-list ul {
-    list-style: none;
 }
 
 /* メインコンテンツ */
@@ -159,4 +153,71 @@ header{
     width: 100%;
     height: 300px;
     margin-top: 10px;
+}
+
+.drawer-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* 最初は画面外に隠す(右) */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  z-index: 200; /* ヘッダー(100)より上に表示 */
+  transition: right 0.3s ease; /* スライドのアニメーション速度 */
+  padding: 20px;
+}
+.drawer-menu.is-open {
+  right: 0; /* ボタンがクリックされたら画面内に表示 */
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.menu-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.building-link-list {
+  list-style: none;
+}
+.building-link-list li {
+  border-bottom: 1px solid #eee;
+}
+.building-link-list a {
+  display: block;
+  padding: 14px 10px;
+  font-weight: bold;
+}
+.building-link-list a:hover {
+  background-color: #f5f5f5;
+  color: #af2333;
+}
+.building-link-list a.current {
+  background-color: #af2333;
+  color: #fff;
+}
+
+/* 背景の黒い影（オーバーレイ） */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 150; /* ヘッダー(100)とドロワー(200)の間に挟む */
+  display: none;
+}
+.overlay.is-open {
+  display: block;
 }
