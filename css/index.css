@@ -30,13 +30,7 @@ body {
 /*画像の最大幅を100%にする*/
 img {
   max-width: 100%;
-}
-/*ページ内の浮動メニュー*/
-nav.floating {
-  position: absolute;
-  top: 100px;
-  left: 50px;
-  background-color: #d0d0d0;
+  justify-content: center;
 }
 /*ヘッダー*/
 header{
@@ -55,22 +49,42 @@ header{
   justify-content: space-between;
   align-items: center;
 }
-
+/*名城大学 学内自販機マップ*/
 .site-title{
   font-weight: bold;
   font-size: 1.2rem;
 }
+/*詳しく探すボタン（ハンバーガーメニュー）*/
 .menu-btn{
   padding: 5px 10px;
   border: 1px solid #333;
   background: #fff;
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+/*ドロワーメニュー*/
+.drawer-menu {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    display: none;/*ドロワーメニューは閉じておく*/
+}
+/*ドロワーメニューがオープンしたときの処理*/
+.drawer-menu.is-open{
+  display: block;
+}
+.building-list ul {
+    list-style: none;
+}
+>>>>>>> 846efcbd9eea462c104e45dd8f7aa8340bf1168c
 
 /* メインコンテンツ */
 .main {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 0 40px;
 }
 
 /* ヒーローエリア */
@@ -83,14 +97,17 @@ header{
     margin-bottom: 30px;
     text-align: left;
 }
+/*あなたのすぐそばに，お目当ての1台を*/
 .hero-title {
     font-size: 3.4rem;
     margin-bottom: 100px;
 }
 
-/* セクションタイトル */
+/*学内自販機マップの使い方*/
 .section-title {
     font-size: 1.3rem;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     margin: 30px 0 15px;
     border-left: 5px solid #333;
     padding-left: 10px;
@@ -101,11 +118,12 @@ header{
     margin-left: 20px;
     margin-bottom: 30px;
 }
+/*詳しく探すボタンについて*/
 .guide-list li {
     margin-bottom: 10px;
 }
 
-/* 色分けテキスト */
+/* 自販機用，テキストの色分け */
 .txt-coca-cola { color: red; font-weight: bold; }
 .txt-suntory { color: green; font-weight: bold; }
 .txt-georgia { color: purple; font-weight: bold; }
@@ -127,23 +145,24 @@ header{
     justify-content: center;
     margin-bottom: 40px;
 }
-
 .vending-image-wrapper {
     text-align: center;
-    width: 10%;
-    min-width: 185px;
+    width: 20%;
+    min-width: 250px;
 }
-
+/*自販機画像サイズ*/
 .vending-img {
-    width: 80%;
-    height: 200px;
+    width: 70%;
+    height: 260px;
     object-fit: cover;
     border: 1px solid #ccc;
 }
 
-/* マップエリア */
+/* 全体地図エリア */
 .totalmap img {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
     height: auto;
     border: 1px solid #ccc;
 }
@@ -154,6 +173,7 @@ header{
     height: 300px;
     margin-top: 10px;
 }
+<<<<<<< HEAD
 
 .drawer-menu {
   position: fixed;
@@ -221,3 +241,54 @@ header{
 .overlay.is-open {
   display: block;
 }
+=======
+/*モバイル端末用，主にサイズ調整*/
+@media(max-width: 800px){
+  /*ページ全体*/
+  body {
+    font-size: 14px;
+    padding: 5px;
+  }
+  /*名城大学 学内自販機マップ*/
+  .site-title{
+    font-size: 1rem;
+  }
+  /*詳しく探すボタン*/
+  .menu-btn{
+    padding: 8px;
+  }
+
+  /* メインコンテンツ */
+  .main {
+      padding: 0 15px;
+  }
+
+  /* ヒーローエリア */
+  .hero-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+  }
+  /*自販機並べ方，モバイル端末では二列で表示*/
+  .vending-image-wrapper {
+      width: 45%;
+      min-width: auto;
+  }
+  /*自販機画像サイズ*/
+  .vending-img {
+      width: 120%;
+      height: 250px;
+  }
+
+  /* 全体地図エリア */
+  .totalmap img {
+      width: 100%;
+  }
+
+  /* アクセスエリア */
+  .access-section iframe {
+      width: 100%;
+      height: 300px;
+      margin-top: 10px;
+  }
+}
+>>>>>>> 846efcbd9eea462c104e45dd8f7aa8340bf1168c
