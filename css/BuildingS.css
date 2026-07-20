@@ -88,12 +88,32 @@ header{
 .txt-dydo { color: orange; font-weight: bold; }
 
 /*階ごとのフロアマップ*/
+.floor-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.floor-container{
+    width: 30%;
+    text-align: center;
+}
 .floor-img-container img{
-    display: block;
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: auto;
 }
+
+/*フッター*/
+.footer{
+  color: #ffffff;
+  background-color: #af1d3d;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*モバイル端末用，主にサイズ調整*/
 @media(max-width: 800px){
     /*ページ全体*/
