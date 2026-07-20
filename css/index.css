@@ -144,7 +144,7 @@ header{
 .totalmap img {
     display: block;
     margin: 0 auto;
-    width: 80%;
+    width: 50%;
     height: auto;
     border: 1px solid #ccc;
 }
